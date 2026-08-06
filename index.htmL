@@ -1,773 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Y2K IRAQ</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-
-background:#050505;
-
-color:white;
-
-}
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-padding:22px 8%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background:rgba(0,0,0,.85);
-
-backdrop-filter:blur(20px);
-
-z-index:1000;
-
-}
-
-.logo{
-
-font-size:34px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:35px;
-
-}
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:15px;
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-color:#999;
-
-}
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-text-align:center;
-
-padding:20px;
-
-background:
-
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8)),
-
-url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1600&q=80");
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.hero h1{
-
-font-size:75px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-margin-bottom:15px;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-color:#d4d4d4;
-
-margin-bottom:40px;
-
-}
-
-.hero a{
-
-background:white;
-
-color:black;
-
-padding:18px 45px;
-
-text-decoration:none;
-
-border-radius:40px;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-.hero a:hover{
-
-transform:translateY(-4px);
-
-}
-
-section{
-
-padding:90px 8%;
-
-}
-
-.title{
-
-font-size:40px;
-
-margin-bottom:40px;
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y2k.iraq | Cyber Vintage Cyberstore</title>
+    <script src="https://tailwindcss.com"></script>
+    <style>
+        @import url('https://googleapis.com');
+        .y2k-glitch { font-family: 'Orbitron', sans-serif; text-shadow: 3px 3px #ff007f, -3px -3px #00f0ff; }
+        .retro-font { font-family: 'VT323', monospace; }
+        .neon-border { border-image: linear-gradient(to right, #ff007f, #00f0ff) 1; }
+    </style>
 </head>
-
-<body>
-
-<header>
-
-<div class="logo">
-
-Y2K IRAQ
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">Shop</a>
-
-<a href="#">New</a>
-
-<a href="#">About</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>PREMIUM STREETWEAR</h1>
-
-<p>Luxury Clothing • Iraq</p>
-
-<a href="#products">
-
-SHOP NOW
-
-</a>
-
-</section><section id="new-arrivals">
-
-<h1 class="title">New Arrivals</h1>
-
-<div class="search-box">
-
-<input id="searchInput" type="text" placeholder="Search products...">
-
-</div>
-
-<div class="categories">
-
-<button onclick="filterProducts('all')">All</button>
-
-<button onclick="filterProducts('tees')">Tees</button>
-
-<button onclick="filterProducts('hoodies')">Hoodies</button>
-
-<button onclick="filterProducts('pants')">Pants</button>
-
-<button onclick="filterProducts('accessories')">Accessories</button>
-
-</div>
-
-<div class="products">
-
-<div class="card tees">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80">
-<h2>Vintage Tee</h2>
-<p>32,000 IQD</p>
-<button>Add to Cart</button>
-</div>
-
-<div class="card hoodies">
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80">
-<h2>Heavy Hoodie</h2>
-<p>68,000 IQD</p>
-<button>Add to Cart</button>
-</div>
-
-<div class="card pants">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80">
-<h2>Baggy Cargo</h2>
-<p>59,000 IQD</p>
-<button>Add to Cart</button>
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-.search-box{
-
-margin-bottom:35px;
-
-}
-
-.search-box input{
-
-width:100%;
-
-padding:18px;
-
-background:#111;
-
-border:1px solid #333;
-
-color:white;
-
-font-size:18px;
-
-border-radius:12px;
-
-outline:none;
-
-}
-
-.categories{
-
-display:flex;
-
-gap:15px;
-
-flex-wrap:wrap;
-
-margin-bottom:40px;
-
-}
-
-.categories button{
-
-background:#181818;
-
-color:white;
-
-border:none;
-
-padding:12px 24px;
-
-border-radius:40px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.categories button:hover{
-
-background:white;
-
-color:black;
-
-}
-
-</style>
-
-<script>
-
-function filterProducts(category){
-
-const cards=document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-if(category==="all"){
-
-card.style.display="block";
-
-}else{
-
-card.style.display=card.classList.contains(category)?"block":"none";
-
-}
-
-});
-
-}
-
-document.getElementById("searchInput").addEventListener("keyup",function(){
-
-const value=this.value.toLowerCase();
-
-document.querySelectorAll(".card").forEach(card=>{
-
-card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
-
-});
-
-});
-
-</script><section id="about">
-
-<h1 class="title">About Y2K IRAQ</h1>
-
-<div class="about">
-
-<div>
-
-<h2>Premium Streetwear</h2>
-
-<p>
-
-Y2K IRAQ brings modern streetwear inspired by global fashion trends.
-Our goal is to provide premium-quality clothing with affordable IQD pricing.
-
-</p>
-
-<a href="#" class="shopbtn">Shop Collection</a>
-
-</div>
-
-<div>
-
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80">
-
-</div>
-
-</div>
-
-</section>
-
-<section id="instagram">
-
-<h1 class="title">Follow Us</h1>
-
-<div class="insta-grid">
-
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=800&q=80">
-
-</div>
-
-<p style="text-align:center;margin-top:30px;">
-
-<a class="shopbtn" href="https://instagram.com/y2k.iraq" target="_blank">
-
-@y2k.iraq
-
-</a>
-
-</p>
-
-</section>
-
-<footer>
-
-<h2>Y2K IRAQ</h2>
-
-<p>
-
-Premium Clothing • Iraq
-
-</p>
-
-<br>
-
-<p>
-
-Instagram: @y2k.iraq
-
-</p>
-
-<p>
-
-WhatsApp Orders Coming Soon
-
-</p>
-
-<br>
-
-<p style="color:#777;">
-
-© 2026 Y2K IRAQ. All Rights Reserved.
-
-</p>
-
-</footer>
-
-<style>
-
-.about{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-
-gap:60px;
-
-align-items:center;
-
-}
-
-.about img{
-
-width:100%;
-
-border-radius:20px;
-
-}
-
-.about p{
-
-color:#bdbdbd;
-
-line-height:1.8;
-
-margin:20px 0;
-
-}
-
-.shopbtn{
-
-display:inline-block;
-
-padding:16px 35px;
-
-background:white;
-
-color:black;
-
-text-decoration:none;
-
-font-weight:bold;
-
-border-radius:50px;
-
-}
-
-.insta-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-}
-
-.insta-grid img{
-
-width:100%;
-
-height:280px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-transition:.35s;
-
-}
-
-.insta-grid img:hover{
-
-transform:scale(1.05);
-
-}
-
-footer{
-
-background:#090909;
-
-padding:70px 20px;
-
-text-align:center;
-
-margin-top:100px;
-
-}
-
-</style>
-
-</body>
-
-</html><section id="about">
-
-<h1 class="title">About Y2K IRAQ</h1>
-
-<div class="about">
-
-<div>
-
-<h2>Premium Streetwear</h2>
-
-<p>
-
-Y2K IRAQ brings modern streetwear inspired by global fashion trends.
-Our goal is to provide premium-quality clothing with affordable IQD pricing.
-
-</p>
-
-<a href="#" class="shopbtn">Shop Collection</a>
-
-</div>
-
-<div>
-
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80">
-
-</div>
-
-</div>
-
-</section>
-
-<section id="instagram">
-
-<h1 class="title">Follow Us</h1>
-
-<div class="insta-grid">
-
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80">
-
-<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=800&q=80">
-
-</div>
-
-<p style="text-align:center;margin-top:30px;">
-
-<a class="shopbtn" href="https://instagram.com/y2k.iraq" target="_blank">
-
-@y2k.iraq
-
-</a>
-
-</p>
-
-</section>
-
-<footer>
-
-<h2>Y2K IRAQ</h2>
-
-<p>
-
-Premium Clothing • Iraq
-
-</p>
-
-<br>
-
-<p>
-
-Instagram: @y2k.iraq
-
-</p>
-
-<p>
-
-WhatsApp Orders Coming Soon
-
-</p>
-
-<br>
-
-<p style="color:#777;">
-
-© 2026 Y2K IRAQ. All Rights Reserved.
-
-</p>
-
-</footer>
-
-<style>
-
-.about{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-
-gap:60px;
-
-align-items:center;
-
-}
-
-.about img{
-
-width:100%;
-
-border-radius:20px;
-
-}
-
-.about p{
-
-color:#bdbdbd;
-
-line-height:1.8;
-
-margin:20px 0;
-
-}
-
-.shopbtn{
-
-display:inline-block;
-
-padding:16px 35px;
-
-background:white;
-
-color:black;
-
-text-decoration:none;
-
-font-weight:bold;
-
-border-radius:50px;
-
-}
-
-.insta-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-}
-
-.insta-grid img{
-
-width:100%;
-
-height:280px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-transition:.35s;
-
-}
-
-.insta-grid img:hover{
-
-transform:scale(1.05);
-
-}
-
-footer{
-
-background:#090909;
-
-padding:70px 20px;
-
-text-align:center;
-
-margin-top:100px;
-
-}
-
-</style>
-
-</body>
-
-<section id="products" style="padding:50px;text-align:center;">
-  <h2>Products</h2>
-
-  <div style="max-width:350px;margin:auto;background:#111;border-radius:15px;padding:20px;">
-    <img src="IMG_0425.jpeg" alt="Nike Tech Fleece" style="width:100%;border-radius:10px;">
-    <h3>Nike Tech Fleece</h3>
-    <p style="font-size:22px;font-weight:bold;">75,000 IQD</p>
-    <button style="padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">
-      Order Now
-    </button>
-  </div>
-</section>
+<body class="bg-black text-white selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header -->
+    <header class="border-b-2 neon-border p-4 sticky top-0 bg-black/90 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold y2k-glitch tracking-widest">Y2K.IRAQ</h1>
+            <nav class="space-x-6 retro-font text-2xl hidden md:flex">
+                <a href="#shop" class="hover:text-cyan-400 transition">SHOP</a>
+                <a href="#bag" class="hover:text-pink-500 transition">BAG (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden border-b neon-border">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,127,0.2)_0%,transparent_70%)]"></div>
+        <div class="text-center z-10 px-4">
+            <p class="retro-font text-xl text-cyan-400 tracking-widest uppercase mb-2">Loading millennium aesthetics...</p>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">BAGGY. GLITCHY. RARE.</h2>
+            <a href="#shop" class="bg-white text-black font-bold px-8 py-3 uppercase tracking-wider hover:bg-cyan-400 hover:text-black transition duration-300 rounded-none border-2 border-white hover:border-cyan-400">Enter Vault</a>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main id="shop" class="max-w-6xl mx-auto px-4 py-16">
+        <h3 class="retro-font text-4xl text-pink-500 mb-12 tracking-wider">// DROP_01_AVAILABLE_NOW</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="border border-zinc-800 p-4 bg-zinc-950 flex flex-col justify-between group">
+                <div class="aspect-square bg-zinc-900 w-full mb-4 flex items-center justify-center text-zinc-700 relative overflow-hidden">
+                    <span class="retro-font text-3xl group-hover:scale-110 transition duration-300">[ OVERSIZED CARGO ]</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl tracking-wide">Cyber-Goth Wide Cargoes</h4>
+                    <p class="text-zinc-400 retro-font text-xl mt-1">45,000 IQD</p>
+                    <button class="w-full mt-4 bg-transparent border border-white text-white retro-font text-xl py-2 hover:bg-pink-500 hover:border-pink-500 transition">ADD_TO_BAG</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="border border-zinc-800 p-4 bg-zinc-950 flex flex-col justify-between group">
+                <div class="aspect-square bg-zinc-900 w-full mb-4 flex items-center justify-center text-zinc-700 relative overflow-hidden">
+                    <span class="retro-font text-3xl group-hover:scale-110 transition duration-300">[ CHROMIUM TEE ]</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl tracking-wide">Metallic Graphics Tee</h4>
+                    <p class="text-zinc-400 retro-font text-xl mt-1">25,000 IQD</p>
+                    <button class="w-full mt-4 bg-transparent border border-white text-white retro-font text-xl py-2 hover:bg-cyan-400 hover:border-cyan-400 transition">ADD_TO_BAG</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="border border-zinc-800 p-4 bg-zinc-950 flex flex-col justify-between group">
+                <div class="aspect-square bg-zinc-900 w-full mb-4 flex items-center justify-center text-zinc-700 relative overflow-hidden">
+                    <span class="retro-font text-3xl group-hover:scale-110 transition duration-300">[ Matrix Shades ]</span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl tracking-wide">Oval Silver Sunglasses</h4>
+                    <p class="text-zinc-400 retro-font text-xl mt-1">15,000 IQD</p>
+                    <button class="w-full mt-4 bg-transparent border border-white text-white retro-font text-xl py-2 hover:bg-pink-500 hover:border-pink-500 transition">ADD_TO_BAG</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout / Contact Form -->
+    <section class="max-w-md mx-auto px-4 py-16 border-t border-zinc-800">
+        <h3 class="retro-font text-3xl text-center text-cyan-400 mb-6">INSTANT_ORDER_FORM</h3>
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Order received via matrix network!');">
+            <input type="text" placeholder="FULL NAME" required class="w-full bg-zinc-900 border border-zinc-700 p-3 text-white focus:outline-none focus:border-cyan-400 rounded-none placeholder-zinc-600">
+            <input type="tel" placeholder="PHONE NUMBER (07XX)" required class="w-full bg-zinc-900 border border-zinc-700 p-3 text-white focus:outline-none focus:border-cyan-400 rounded-none placeholder-zinc-600">
+            <input type="text" placeholder="CITY / DELIVERY ADDRESS" required class="w-full bg-zinc-900 border border-zinc-700 p-3 text-white focus:outline-none focus:border-cyan-400 rounded-none placeholder-zinc-600">
+            <button type="submit" class="w-full bg-cyan-400 text-black font-bold py-3 uppercase tracking-wider hover:bg-pink-500 hover:text-white transition">SUBMIT_ORDER</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-900 py-8 text-center text-zinc-600 retro-font text-lg">
+        <p>© 2026 Y2K.IRAQ // SYSTEM_ONLINE // INSTAGRAM: @y2k.iraq</p>
+    </footer>
 
 </body>
 </html>
